@@ -22,7 +22,7 @@ Se você precisa emitir boletos de forma gratuita, esse projeto pode ser útil!
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **Java 8+**
+- **Java**
 - **[stella-boleto](https://github.com/caelum/stella)** (geração de boletos)
 - **Spring Boot** (opcional, para estrutura e injeção de dependências)
 - **Bibliotecas de geração de QRCode** (opcional)
