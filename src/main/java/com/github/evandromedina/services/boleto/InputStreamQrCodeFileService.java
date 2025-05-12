@@ -1,0 +1,28 @@
+package com.github.evandromedina.services.boleto;
+
+import net.glxn.qrgen.javase.QRCode;
+import org.springframework.stereotype.Service;
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
+
+/*
+* Este serviço utiliza a biblioteca QRGen para gerar um QR Code a partir de uma string (codigo).
+* */
+
+@Service
+public class InputStreamQrCodeFileService implements GeradorQrCodeService {
+
+    @Override
+    public InputStream gerar(String codigo) { //codigo = qrCode salvo no banco
+
+        try {
+            var code = QRCode.from(codigo).withSize(250, 250).stream();
+            ByteArrayInputStream bis = new ByteArrayInputStream(code.toByteArray());
+            return bis;
+        } catch (Exception e) {
+            System.err.println("Erro ao gerar QR Code: " + e.getMessage());
+            e.printStackTrace();
+            return null; //ou lançar uma exceção
+        }
+    }
+}
