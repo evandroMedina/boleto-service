@@ -1,4 +1,4 @@
-# Boleto Service
+# 🧾 Boleto Service
 
 O projeto **Boleto Service** é um módulo que permite gerar um boleto bancário — neste caso, para o **Banco Santander** — contendo código de barras e QRCode Pix. O **Boleto Service** utiliza a biblioteca open source [stella-boleto](https://github.com/caelum/stella) da **Caelum-Stella**, que oferece suporte para todo o processo base de construção do boleto.
 
@@ -8,16 +8,23 @@ Além disso, considerando que ainda existem poucas bibliotecas open source no Br
 
 Se você precisa emitir boletos de forma gratuita, esse projeto pode ser útil!
 
+> 💡 **Observação**: A injeção de classes via anotações do Spring Boot, quando presente, serve como **referência alusiva** — podendo ou não fazer parte da implementação, dependendo das **preferências de arquitetura**, do **modelo de negócio** ou dos **padrões de projeto** adotados.
+
+---
+
 ## 📌 Objetivos
 
-- Gerar boletos bancários para o **Banco Santander**.
-- Incluir **código de barras** e **QRCode Pix** no boleto.
+- Gerar boletos válidos para o **Banco Santander**.
+- Incluir elementos como **código de barras** e **QRCode Pix** no boleto.
 - Utilizar a biblioteca open source **stella-boleto** para facilitar o processo.
+
+---
 
 ## ⚙️ Tecnologias Utilizadas
 
-- **Java**
-- **stella-boleto** (biblioteca para geração de boletos bancários)
-- **QRCode Pix**
+- **Java 8+**
+- **[stella-boleto](https://github.com/caelum/stella)** (geração de boletos)
+- **Spring Boot** (opcional, para estrutura e injeção de dependências)
+- **Bibliotecas de geração de QRCode** (opcional)
 
 
